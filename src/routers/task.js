@@ -3,24 +3,28 @@ const router = new express.Router()
 const User = require('../models/user')
 const Task = require('../models/task')
 const auth = require('../middleware/auth')
-const { query } = require('express')
+const {
+    query
+} = require('express')
 
 router.get('/tasks', auth, async (req, res) => {
-    const match={
+    const match = {
 
     }
+    const sort={}
 
-    if(req.query.completed){
-        match.completed=req.query.completed=='true'
+    if (req.query.completed) {
+        match.completed = req.query.completed == 'true'
     }
     try {
 
         await req.user.populate({
-            path:'tasks',
+            path: 'tasks',
             match,
-            options:{
-limit:parseInt(req.query.limit),
-skip:parseInt(req.query.skip)
+            options: {
+                limit: parseInt(req.query.limit),
+                skip: parseInt(req.query.skip),
+            sort,
             }
         });
 
