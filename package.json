@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bhailang": "^0.0.4",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.2.0",
+    "nodemon": "^2.0.15",
+    "nvm": "^0.0.4",
+    "puppeteer": "^13.5.1",
+    "validator": "^13.7.0"
+  },
+  "name": "task-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
